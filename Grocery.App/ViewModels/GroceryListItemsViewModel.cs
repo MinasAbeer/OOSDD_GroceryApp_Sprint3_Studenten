@@ -32,6 +32,12 @@ namespace Grocery.App.ViewModels
         [ObservableProperty]
         string query = string.Empty;
 
+        partial void OnQueryChanged(string value)
+        {
+            // Roep direct de zoekfunctie aan met de nieuwe waarde
+            Search(value);
+        }
+
         public GroceryListItemsViewModel(IGroceryListItemsService groceryListItemsService, IProductService productService, IFileSaverService fileSaverService)
         {
             _groceryListItemsService = groceryListItemsService;
