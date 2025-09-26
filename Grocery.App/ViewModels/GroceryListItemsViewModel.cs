@@ -34,7 +34,6 @@ namespace Grocery.App.ViewModels
 
         partial void OnQueryChanged(string value)
         {
-            // Roep direct de zoekfunctie aan met de nieuwe waarde
             Search(value);
         }
 
